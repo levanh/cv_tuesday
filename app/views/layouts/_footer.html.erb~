@@ -1,0 +1,14 @@
+<footer class="footer">
+  <small>
+		Ce site a été développé grâce au
+    <a href="http://railstutorial.org/">Rails Tutorial</a>
+    de Michael Hartl
+  </small>
+  <nav>
+    <ul>
+      <li><%= link_to "A Propos",   '#' %></li>
+      <li><%= link_to "Contact", '#' %></li>
+    </ul>
+  </nav>
+</footer>
+

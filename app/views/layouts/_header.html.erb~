@@ -1,0 +1,14 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
+    <div class="container">
+      <%= link_to "CV Tuesday", '#', id: "logo" %>
+      <nav>
+        <ul class="nav pull-right">
+          <li><%= link_to "Accueil",    root_path %></li>
+          <li><%= link_to "Aide",   		help_path %></li>
+          <li><%= link_to "S'inscrire", '#' %></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
