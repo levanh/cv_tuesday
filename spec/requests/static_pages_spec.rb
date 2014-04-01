@@ -22,8 +22,8 @@ describe "Static pages" do
   describe "About page" do
     before { visit about_path }
 
-    it { should have_content('A Propos') }
-    it { should have_title(full_title('A Propos')) }
+    it { should have_content('À Propos') }
+    it { should have_title(full_title('À Propos')) }
   end
 
   describe "Contact page" do

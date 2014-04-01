@@ -1,13 +1,11 @@
 <footer class="footer">
   <small>
-		Ce site a été développé grâce au
-    <a href="http://railstutorial.org/">Rails Tutorial</a>
-    de Michael Hartl
+		<a href="http://jigsaw.w3.org/css-validator/"><strong>CSS3</strong> valide !</a>
   </small>
   <nav>
     <ul>
-      <li><%= link_to "A Propos",   '#' %></li>
-      <li><%= link_to "Contact", '#' %></li>
+      <li><%= link_to "A Propos",   about_path %></li>
+      <!-- <li><%= link_to "Contact", 		contact_path %></li> -->
     </ul>
   </nav>
 </footer>
