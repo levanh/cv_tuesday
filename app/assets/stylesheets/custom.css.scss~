@@ -36,11 +36,12 @@ textarea {
 }
 
 .left{
-  float:left;
+  float: left;
+	margin-right: 5px;
 }
 
 .clear{
-  clear:both;
+  clear: both;
 }
 
 /* typography */
@@ -156,10 +157,18 @@ aside {
 
 /* forms */
 
+#new_user {
+	border: 1px solid #bbb;
+	padding: 25px;
+  @include box_sizing;
+
+  width: 100%;
+}
+
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   @include box_sizing;
 }
 
@@ -182,13 +191,13 @@ input {
 }
 
 #user_weight {
-	width: 75px;
   margin-right: 100px;
 }
 
 #user_ideal_weight {
-	width: 75px;
+	width: 50px;
 }
+
 
 #error_explanation {
   color: #f00;

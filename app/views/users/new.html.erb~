@@ -2,7 +2,7 @@
 <h1>Inscription</h1>
 <div class="row">
   <div class="span6 offset3">
-    <%= form_for(@user) do |f| %>
+    <%= form_for(@user, class: "form-horizontal center") do |f| %>
       <%= render 'shared/error_messages' %>
       <%= f.label :name, "Nom" %>
       <%= f.text_field :name %>
@@ -10,7 +10,7 @@
 			<%= f.label :birthdate, "Date de naissance" %>
 			<%= f.date_select :birthdate, order: [:day, :month, :year],
 																		start_year: Time.now.year-45, end_year: Time.now.year-15,
-																		selected: Time.now.year-22 %>
+																		selected: nil>
 
 			<div class="left">
 				<%= f.label :weight, "Poids actuel (kg)" %>
@@ -23,6 +23,39 @@
 
 			<div class="clear">&nbsp;</div>
 
+			<div class="left" style="margin-right:45px;">
+				<label class="checkbox-inline">
+					<input type="radio" name="sporty" id="user_sporty_yes" 
+		       value="yes" checked> Je fais du sport
+				</label>
+			</div>
+			<div class="left">
+				<label class="checkbox-inline">
+					<input type="radio" name="sporty" id="user_sporty_not" 
+		       value="no"> Je ne fais pas de sport
+				</label>
+			</div>
+
+			<div class="clear">&nbsp;</div>
+
+			<div style="display: none;">
+				<div class="left">
+					<label class="checkbox-inline">
+						<input type="radio" name="getsporty" id="user_getsporty_yes" 
+				     value="yes" checked> J'aimerais faire du sport
+					</label>
+				</div>
+				<div class="left">
+					<label class="checkbox-inline">
+						<input type="radio" name="getsporty" id="user_getsporty_not" 
+				     value="no"> Non merci !
+					</label>
+				</div>
+			</div>
+
+			<div class="clear">&nbsp;</div>
+
+
       <%= f.label :email, "E-mail" %>
       <%= f.text_field :email %>
 
@@ -32,7 +65,7 @@
       <%= f.label :password_confirmation, "Confirmation" %>
       <%= f.password_field :password_confirmation %>
 
-      <%= f.submit "Créer mon profil", class: "btn btn-large btn-primary center" %>
+      <%= f.submit "Créer mon profil", class: "btn btn-large btn-primary" %>
     <% end %>
   </div>
 </div>
