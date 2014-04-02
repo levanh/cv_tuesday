@@ -1,18 +1,7 @@
 en:
   date:
     month_names:
-      - Janvier
-      - Février
-      - Mars
-      - Avril
-      - Mai
-      - Juin
-      - Juillet
-      - Août
-      - Septembre
-      - Octobre
-      - Novembre
-      - Décembre
+      - janvier
   activerecord:
     attributes:
       user:

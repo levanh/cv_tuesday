@@ -3,9 +3,25 @@
 <div class="row">
   <div class="span6 offset3">
     <%= form_for(@user) do |f| %>
-
+      <%= render 'shared/error_messages' %>
       <%= f.label :name, "Nom" %>
       <%= f.text_field :name %>
+
+			<%= f.label :birthdate, "Date de naissance" %>
+			<%= f.date_select :birthdate, order: [:day, :month, :year],
+																		start_year: Time.now.year-45, end_year: Time.now.year-15,
+																		selected: Time.now.year-22 %>
+
+			<div class="left">
+				<%= f.label :weight, "Poids actuel (kg)" %>
+		  	<%= f.text_field :weight %>
+			</div>
+			<div class="left">
+				<%= f.label :ideal_weight, "Poids idéal (kg)" %>
+		  	<%= f.text_field :ideal_weight %>
+			</div>
+
+			<div class="clear">&nbsp;</div>
 
       <%= f.label :email, "E-mail" %>
       <%= f.text_field :email %>
@@ -16,7 +32,7 @@
       <%= f.label :password_confirmation, "Confirmation" %>
       <%= f.password_field :password_confirmation %>
 
-      <%= f.submit "Créer mon profil", class: "btn btn-large btn-primary" %>
+      <%= f.submit "Créer mon profil", class: "btn btn-large btn-primary center" %>
     <% end %>
   </div>
 </div>
