@@ -24,7 +24,9 @@ en:
         sporty: ""
         password: ""
         password_confirmation: ""
+				cv: ""
     errors:
       messages:
         blank: ""
+        taken: "Cette entrée existe déjà"
         confirmation: "Les mots de passe ne sont pas semblables"

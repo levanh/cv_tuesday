@@ -4,7 +4,7 @@ describe User do
 
   before do
     @user = User.new(name: "Example User", birthdate: "1990-01-01",
-										 weight: "75", ideal_weight: "65",
+										 weight: "75", ideal_weight: "65", sporty: "t",
 										 email: "user@example.com",
                      password: "foobar", password_confirmation: "foobar")
 	end
@@ -15,6 +15,7 @@ describe User do
   it { should respond_to(:birthdate) }
   it { should respond_to(:weight) }
   it { should respond_to(:ideal_weight) }
+  it { should respond_to(:sporty) }
   it { should respond_to(:email) }
   it { should respond_to(:password_digest) }
   it { should respond_to(:password) }

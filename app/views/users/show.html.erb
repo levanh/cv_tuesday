@@ -8,6 +8,14 @@
       </h1>
 			<h1>
 				<%= age(@user) %> ans
+				<br>
+				<%= @user.weight %> kg
+				<br>
+				<% if @user.sporty? %>
+					Sportif(ve)
+				<% else %>
+					Non-sportif(ve)
+				<% end %>
 			</h1>
     </section>
   </aside>

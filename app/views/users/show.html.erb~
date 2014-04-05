@@ -7,7 +7,15 @@
         <%= @user.name %>
       </h1>
 			<h1>
-				<%= @user.age %> ans
+				<%= age(@user) %> ans
+				<br>
+				<%= @user.weight %> kg
+				<br>
+				<% if @user.sporty? %>
+					Sportif
+				<% else %>
+					Non-sportif
+				<% end %>
 			</h1>
     </section>
   </aside>

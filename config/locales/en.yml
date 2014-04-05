@@ -24,6 +24,7 @@ en:
         sporty: ""
         password: ""
         password_confirmation: ""
+        cv: ""
     errors:
       messages:
         blank: ""

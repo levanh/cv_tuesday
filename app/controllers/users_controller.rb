@@ -9,6 +9,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+  	@user.cv = params[:cv]
     if @user.save
 			flash[:success] = "Vous avez créé votre profil avec succès."
       redirect_to @user
@@ -20,8 +21,10 @@ class UsersController < ApplicationController
   private
 
     def user_params
-      params.require(:user).permit(:name, :email, :birthdate,
-																	 :password, :weight, :ideal_weight,
-                                   :password_confirmation)
+      params.require(:user).permit(:name, :birthdate,
+																	 :weight, :ideal_weight, :sporty,
+																	 :email,
+                                   :password, :password_confirmation,
+																	 :cv)
     end
 end

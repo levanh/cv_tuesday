@@ -2,7 +2,7 @@
 <h1>Inscription</h1>
 <div class="row">
   <div class="span6 offset3">
-    <%= form_for(@user, class: "form-horizontal center") do |f| %>
+    <%= form_for @user, :html => {:multipart => true} do |f| %>
       <%= render 'shared/error_messages' %>
       <%= f.label :name, "Nom" %>
       <%= f.text_field :name %>
@@ -25,14 +25,14 @@
 
 			<div class="left" style="margin-right:45px;">
 				<label class="checkbox-inline">
-					<input type="radio" name="sporty" id="user_sporty_yes" 
-		       value="yes" checked> Je fais du sport
+					<input type="radio" name="user[sporty]" id="user_sporty_yes" 
+		       value="1" checked> Je fais du sport
 				</label>
 			</div>
 			<div class="left">
 				<label class="checkbox-inline">
-					<input type="radio" name="sporty" id="user_sporty_not" 
-		       value="no"> Je ne fais pas de sport
+					<input type="radio" name="user[sporty]" id="user_sporty_not" 
+		       value="0"> Je ne fais pas de sport
 				</label>
 			</div>
 
@@ -41,14 +41,14 @@
 			<div style="display: none;">
 				<div class="left">
 					<label class="checkbox-inline">
-						<input type="radio" name="getsporty" id="user_getsporty_yes" 
-				     value="yes" checked> J'aimerais faire du sport
+						<input type="radio" name="user[getsporty]" id="user_getsporty_yes" 
+				     value="1" checked> J'aimerais faire du sport
 					</label>
 				</div>
 				<div class="left">
 					<label class="checkbox-inline">
-						<input type="radio" name="getsporty" id="user_getsporty_not" 
-				     value="no"> Non merci !
+						<input type="radio" name="user[getsporty]" id="user_getsporty_not" 
+				     value="0"> Non merci !
 					</label>
 				</div>
 			</div>
@@ -64,6 +64,9 @@
 
       <%= f.label :password_confirmation, "Confirmation" %>
       <%= f.password_field :password_confirmation %>
+
+			<%= f.label :cv, "Attacher un CV" %>
+			<%= f.file_field :cv %>
 
       <%= f.submit "Créer mon profil", class: "btn btn-large btn-primary" %>
     <% end %>
