@@ -21,6 +21,7 @@ en:
         birthdate: ""
         weight: ""
         ideal_weight: ""
+        height: ""
         sporty: ""
         password: ""
         password_confirmation: ""
@@ -28,5 +29,13 @@ en:
     errors:
       messages:
         blank: ""
-        taken: "Cette entrée existe déjà"
-        confirmation: "Les mots de passe ne sont pas semblables"
+        not_a_number: ""
+        inclusion: ""
+        confirmation: ""
+      models:
+        user:
+          attributes:
+            name:
+              taken: "Un utilisateur à ce nom existe déjà"
+            email:
+              taken: "Cet e-mail existe déjà"

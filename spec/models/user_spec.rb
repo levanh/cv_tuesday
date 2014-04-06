@@ -3,10 +3,12 @@ require 'spec_helper'
 describe User do
 
   before do
-    @user = User.new(name: "Example User", birthdate: "1990-01-01",
-										 weight: "75", ideal_weight: "65", sporty: "t",
-										 email: "user@example.com",
-                     password: "foobar", password_confirmation: "foobar")
+    @user = User.new(name: "John Doe", birthdate: "1990-01-01",
+										 weight: "75", ideal_weight: "65", height: "175",
+										 sporty: "t",
+										 email: "john@doe.com",
+                     password: "foobar", password_confirmation: "foobar",
+										 cv: "example.pdf")
 	end
 
   subject { @user }
@@ -15,6 +17,7 @@ describe User do
   it { should respond_to(:birthdate) }
   it { should respond_to(:weight) }
   it { should respond_to(:ideal_weight) }
+  it { should respond_to(:height) }
   it { should respond_to(:sporty) }
   it { should respond_to(:email) }
   it { should respond_to(:password_digest) }

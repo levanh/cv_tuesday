@@ -5,21 +5,27 @@
     <%= form_for @user, :html => {:multipart => true} do |f| %>
       <%= render 'shared/error_messages' %>
       <%= f.label :name, "Nom" %>
-      <%= f.text_field :name %>
+      <%= f.text_field :name, placeholder: "Entrez votre nom d'utilisateur" %>
 
 			<%= f.label :birthdate, "Date de naissance" %>
 			<%= f.date_select :birthdate, order: [:day, :month, :year],
 																		start_year: Time.now.year-45, end_year: Time.now.year-15,
 																		include_blank: true, default: nil %>
 
-			<div class="left">
+			<div class="left" id="div_weight">
 				<%= f.label :weight, "Poids actuel (kg)" %>
-		  	<%= f.text_field :weight %>
+		  	<%= f.text_field :weight, maxlength: 4 %>
 			</div>
-			<div class="left">
+			<div class="left" id="div_ideal_weight">
 				<%= f.label :ideal_weight, "Poids idéal (kg)" %>
-		  	<%= f.text_field :ideal_weight %>
+		  	<%= f.text_field :ideal_weight, maxlength: 4 %>
 			</div>
+			<div class="left" id="div_height">
+				<%= f.label :height, "Taille (cm)" %>
+		  	<%= f.text_field :height, maxlength: 3 %>
+			</div>
+
+
 
 			<div class="clear">&nbsp;</div>
 
@@ -55,20 +61,19 @@
 
 			<div class="clear">&nbsp;</div>
 
-
       <%= f.label :email, "E-mail" %>
-      <%= f.text_field :email %>
+      <%= f.text_field :email , placeholder: "Entrez votre e-mail" %>
 
       <%= f.label :password, "Mot de passe" %>
-      <%= f.password_field :password %>
+      <%= f.password_field :password, placeholder: "Entrez un mot de passe" %>
 
       <%= f.label :password_confirmation, "Confirmation" %>
-      <%= f.password_field :password_confirmation %>
+      <%= f.password_field :password_confirmation , placeholder: "Entrez à nouveau le mot de passe" %>
 
 			<%= f.label :cv, "Attacher un CV" %>
 			<%= f.file_field :cv %>
 
-      <%= f.submit "Créer mon profil", class: "btn btn-large btn-primary" %>
+      <%= f.submit "Créer mon profil", class: "btn btn-large btn-inverse" %>
     <% end %>
   </div>
 </div>

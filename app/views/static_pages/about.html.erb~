@@ -1,7 +1,0 @@
-<% provide(:title, 'À  Propos') %>
-<h1>À Propos</h1>
-<p>
-  Ce site a été développé grâce au <a href="http://railstutorial.org/">Tutoriel Ruby on Rails</a>
-  de Michael Hartl (cf. <a href="http://rubyonrails.org/">Ruby on Rails</a>).<br>
-	Il a pour but d'offrir la possibilité de créer un profil minimal, ainsi que déposer son CV en format .pdf.
-</p>

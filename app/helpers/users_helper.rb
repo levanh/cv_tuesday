@@ -16,4 +16,12 @@ module UsersHelper
 		# Returns age
 		age
 	end
+
+	# Returns the BMI for the given user.
+	def bmi(user)
+		w = user.weight
+		h = user.height / 100
+		bmi = w/(h*h)
+		bmi.round(2)
+	end
 end

@@ -2,6 +2,8 @@
 
 /* mixins, variables, etc. */
 
+$red: red;
+$blue: blue;
 $grayMediumLight: #eaeaea;
 
 @mixin box_sizing {
@@ -18,14 +20,22 @@ html {
 
 body {
   padding-top: 60px;
+	background-color: $grayDarker;
 }
-
+ 
 section {
   overflow: auto;
 }
 
 textarea {
   resize: vertical;
+}
+
+
+btn {
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
 }
 
 .center {
@@ -76,15 +86,15 @@ p {
 #logo {
   float: left;
   margin-right: 10px;
-  font-size: 1.7em;
-  color: white;
+  font-size: 1.75em;
+  color: crimson;
   text-transform: uppercase;
   letter-spacing: -1px;
-  padding-top: 9px;
+  padding-top: 10px;
   font-weight: bold;
   line-height: 1;
   &:hover {
-    color: white;
+    color: #EA728A;
     text-decoration: none;
   }
 }
@@ -131,7 +141,7 @@ aside {
       line-height: 1;
     }
     h1 {
-      font-size: 1.4em;
+      font-size: 2em;
       text-align: left;
       letter-spacing: -1px;
       margin-bottom: 3px;
@@ -145,24 +155,12 @@ aside {
   margin-right: 10px;
 }
 
-/* miscellaneous */
-
-.debug_dump {
-  clear: both;
-  float: left;
-  width: 100%;
-  margin-top: 45px;
-  @include box_sizing;
-}
-
 /* forms */
 
 #new_user {
-	border: 1px solid #bbb;
+	border: 1px solid red;
 	padding: 25px;
-  @include box_sizing;
-
-  width: 100%;
+	background-color: $grayLight;
 }
 
 input, textarea, select, .uneditable-input {
@@ -190,15 +188,13 @@ input {
   width: 75px;
 }
 
-#user_weight {
-	width: 50px;
-  margin-right: 100px;
+#div_weight, #div_ideal_weight, #div_height {
+  margin-right: 10px;
 }
 
-#user_ideal_weight {
-	width: 50px;
+#user_weight, #user_ideal_weight, #user_height {
+	width: 75px;
 }
-
 
 #error_explanation {
   color: #f00;
@@ -212,3 +208,19 @@ input {
   @extend .control-group;
   @extend .error;
 }
+
+/* Users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-top: 1px solid $grayLighter;
+    &:last-child {
+      border-bottom: 1px solid $grayLighter;
+    }
+  }
+}
+

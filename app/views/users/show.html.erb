@@ -9,13 +9,19 @@
 			<h1>
 				<%= age(@user) %> ans
 				<br>
+				<%= @user.height %> cm
+				<br>
 				<%= @user.weight %> kg
+				<br>
+				(IMC : <%= bmi(@user) %>)
 				<br>
 				<% if @user.sporty? %>
 					Sportif(ve)
 				<% else %>
 					Non-sportif(ve)
 				<% end %>
+				<br>
+				<a href="<%= @user.cv %>" target="_blank">Voir le CV</a>
 			</h1>
     </section>
   </aside>

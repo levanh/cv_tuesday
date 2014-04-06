@@ -10,8 +10,13 @@ class User < ActiveRecord::Base
 	validates :birthdate, presence: { message: "Veuillez renseigner votre date de naissance complète " }
 
 	validates_numericality_of :weight, message: "Veuillez entrer un poids valide (numérique)"
+	validates_inclusion_of :weight, in: 40..99
+
 	validates_numericality_of :ideal_weight, message: "Veuillez entrer un poids idéal valide (numérique)",
 																		       less_than: :weight
+																					
+	validates_numericality_of :height, message: "Veuillez entrer une taille valide"
+	validates_inclusion_of :height, in: 140..200
 
 	validates_inclusion_of :sporty, :in => [true, false]
 

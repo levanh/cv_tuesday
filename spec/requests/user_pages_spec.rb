@@ -33,13 +33,14 @@ describe "User pages" do
 
     describe "with valid information" do
       before do
-        fill_in "Nom",        				with: "Example User"
+        fill_in "Nom",        				with: "John Doe"
 				select  "1",        				  from: "user_birthdate_3i"
 				select  "Janvier",        		from: "user_birthdate_2i"
 				select  "1990",        				from: "user_birthdate_1i"
 				fill_in "Poids actuel",				with: "75"
 				fill_in "Poids idéal",				with: "65"
-        fill_in "E-mail", 						with: "user@example.com"
+				fill_in "Taille",							with: "175"
+        fill_in "E-mail", 						with: "john@doe.com"
         fill_in "Mot de passe",  			with: "foobar"
         fill_in "Confirmation", 			with: "foobar"
       end

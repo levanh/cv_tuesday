@@ -4,6 +4,7 @@ FactoryGirl.define do
 		birthdate 						"1990-01-01"
 		weight                "75"
 		ideal_weight          "65"
+		height								"175"
 		sporty								"t"
     email   							"johndoe@example.com"
     password 							"foobar"
