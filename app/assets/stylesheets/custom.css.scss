@@ -2,8 +2,8 @@
 
 /* mixins, variables, etc. */
 
-$red: red;
-$blue: blue;
+$crimson: crimson;
+$crimsonLight: #EA728A;
 $grayMediumLight: #eaeaea;
 
 @mixin box_sizing {
@@ -31,13 +31,6 @@ textarea {
   resize: vertical;
 }
 
-
-btn {
-   -webkit-border-radius: 20px;
-   -moz-border-radius: 20px;
-   border-radius: 20px;
-}
-
 .center {
   text-align: center;
   h1 {
@@ -52,6 +45,10 @@ btn {
 
 .clear{
   clear: both;
+}
+
+.gray{
+	color: $grayMediumLight;
 }
 
 /* typography */
@@ -73,7 +70,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: $grayLight;
+  color: $crimson;
 }
 
 p {
@@ -94,7 +91,7 @@ p {
   font-weight: bold;
   line-height: 1;
   &:hover {
-    color: #EA728A;
+    color: $crimsonLight;
     text-decoration: none;
   }
 }
@@ -104,12 +101,12 @@ p {
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid $grayMediumLight;
-  color: $grayLight;
+  border-top: 1px solid $crimson;
+  color: $crimson;
   a {
-    color: $gray;
+    color: $crimson;
     &:hover {
-      color: $grayDarker;
+      color: $crimsonLight;
     }
   }
   small {
@@ -129,17 +126,11 @@ footer {
 
 aside {
   section {
-    padding: 10px 0;
-    border-top: 1px solid $grayLighter;
-    &:first-child {
-      border: 0;
-      padding-top: 0;
-    }
-    span {
-      display: block;
-      margin-bottom: 3px;
-      line-height: 1;
-    }
+		border: 1px solid red;
+		border-radius: 10px;
+    padding: 10px;
+		background-color: $grayLight;
+		min-width: 250px;
     h1 {
       font-size: 2em;
       text-align: left;
@@ -159,6 +150,7 @@ aside {
 
 #new_user {
 	border: 1px solid red;
+	border-radius: 10px;
 	padding: 25px;
 	background-color: $grayLight;
 }

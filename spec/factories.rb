@@ -6,7 +6,7 @@ FactoryGirl.define do
 		ideal_weight          "65"
 		height								"175"
 		sporty								"t"
-    email   							"johndoe@example.com"
+    email   							"john@doe.com"
     password 							"foobar"
     password_confirmation "foobar"
   end

@@ -37,6 +37,16 @@ describe User do
     it { should_not be_valid }
   end
 
+  describe "when name is already taken" do
+    before do
+      user_with_same_name = @user.dup
+      user_with_same_name.name = @user.name.upcase
+      user_with_same_name.save
+    end
+
+    it { should_not be_valid }
+  end
+
   describe "when ideal weight is over current weight" do
     before { @user.ideal_weight = @user.weight + 5 }
     it { should_not be_valid }

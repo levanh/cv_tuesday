@@ -1,19 +1,21 @@
 <% provide(:title, @user.name) %>
+<h1>Profil Utilisateur</h1>
 <div class="row">
   <aside class="span4">
     <section>
       <h1>
         <%= gravatar_for @user %>
         <%= @user.name %>
-      </h1>
-			<h1>
+				<br>
+				<span class="gray"><%= @user.email %></span>
+				<br>
 				<%= age(@user) %> ans
 				<br>
 				<%= @user.height %> cm
 				<br>
 				<%= @user.weight %> kg
 				<br>
-				(IMC : <%= bmi(@user) %>)
+				<span class="gray">(IMC : <%= bmi(@user) %>)</span>
 				<br>
 				<% if @user.sporty? %>
 					Sportif(ve)

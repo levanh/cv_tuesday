@@ -1,3 +1,3 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+jQuery ->
+  $('#user_sporty_not').click -> $('#div_get_sporty').show()
+  $('#user_sporty_yes').click -> $('#div_get_sporty').hide()
